@@ -1,0 +1,60 @@
+// header styles
+.header{
+    background: #336699;
+    position: fixed;
+    width: 100%;
+
+top:0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    ._nav{
+        li{
+            display: inline-block;
+
+            a{
+                color:#fff;
+                transition: all 0.3s ease;
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                font-size:18px;
+                padding: 0 20px;
+
+                &:hover{
+                    background: rgba(255,255,255,0.1);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    ._social{
+        li{
+            display: inline-block;
+
+            a{
+                color:#fff;
+                transition: all 0.3s ease;
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                font-size:21px;
+                padding: 0 5px;
+
+                &:hover{
+                    opacity:.5;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
