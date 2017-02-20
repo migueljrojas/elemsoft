@@ -1,1 +1,87 @@
-// footer styles
+.footer{
+    background: $dark-blue;
+    padding: 60px 0;
+    color:#fff;
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    ._sitemap{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding-left: 0;
+
+        & > li{
+            flex:1;
+            max-width:20%;
+            padding-left: 0;
+            margin-right: 20px;
+
+            & > a {
+                color:#fff;
+                font-size:1.2em;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        .sublist{
+            list-style: none;
+            padding-left: 0;
+
+            li{
+                margin-bottom: 5px;
+            }
+
+            a{
+                color:rgba(255,255,255,.6);
+                font-size:0.9em;
+
+                &:hover{
+                    color:#fff;
+                }
+
+                &::before{
+                    content: '- ';
+                }
+
+                &.mail{
+                    font-size:0.8em;
+
+                    &::before{
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

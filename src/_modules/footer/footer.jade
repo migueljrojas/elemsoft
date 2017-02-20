@@ -1,6 +1,49 @@
-mixin footer(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
-
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the footer module
+footer.footer
+    .container
+        img(src="/images/logo-footer.png")
+        
+        ul._sitemap
+            li
+                a(href="/nosotros") Nosotros
+                
+                ul.sublist
+                    li 
+                        a(href="/nosotros/#mision") Misión
+                    li 
+                        a(href="/nosotros/#vision") Visión
+                    li 
+                        a(href="/nosotros/#valores") Valores
+            
+            li
+                a(href="/clientes") Clientes
+                
+            li
+                a(href="/servicios") Servicios
+                
+                ul.sublist
+                    li 
+                        a(href="/servicios/#sistemas-web") Sistemas Web
+                    li 
+                        a(href="/servicios/#desarrollo-web") Desarrollo Web
+                    li 
+                        a(href="/servicios/#diseño-grafico") Diseño Gráfico
+                    
+            li
+                a(href="/productos") Productos
+                
+                ul.sublist
+                    li
+                        a(href="/productos/#desarrollo-web") Sistema de gestión de torneos de fútbol
+                    
+            li
+                a(href="/contacto") Contacto
+                
+                ul.sublist
+                    li +54 xxx xxx xxxx
+                    li
+                        a.mail(href="mailto:info@elemsoft.com.ar")
+                            | info@elemsoft.com.ar
+                
+                
+            
+    p.small.text-center 2017. Todos los derechos reservados &reg;

@@ -1,0 +1,42 @@
+[
+    {
+        "logo": "/images/clients/1.png",
+        "name": "AEPU",
+        "jobDescription": "Desarrollamos en conjunto con el cliente una web que le permita mostrar su trabajo a más gente",
+        "jobFeedback": "Exelente trabajo! Trabajan de una manera profesional y cumpliendo las expectativas de uno",
+        "jobFeedbackName": "Javier Gomez",
+        "jobImgCover": "/images/clients/1.jpg"
+    },
+    {
+        "logo": "/images/clients/2.png",
+        "name": "Javier Gómez",
+        "jobDescription": "Desarrollamos en conjunto con el cliente una web que le permita mostrar su trabajo a más gente",
+        "jobFeedback": "Exelente trabajo! Trabajan de una manera profesional y cumpliendo las expectativas de uno",
+        "jobFeedbackName": "Javier Gomez",
+        "jobImgCover": "/images/clients/2.jpg"
+    },
+    {
+        "logo": "/images/clients/3.png",
+        "name": "Random",
+        "jobDescription": "Desarrollamos en conjunto con el cliente una web que le permita mostrar su trabajo a más gente",
+        "jobFeedback": "Exelente trabajo! Trabajan de una manera profesional y cumpliendo las expectativas de uno",
+        "jobFeedbackName": "Javier Gomez",
+        "jobImgCover": "/images/clients/3.jpg"
+    },
+    {
+        "logo": "/images/clients/4.png",
+        "name": "EquisClient",
+        "jobDescription": "Desarrollamos en conjunto con el cliente una web que le permita mostrar su trabajo a más gente",
+        "jobFeedback": "Exelente trabajo! Trabajan de una manera profesional y cumpliendo las expectativas de uno",
+        "jobFeedbackName": "Javier Gomez",
+        "jobImgCover": "/images/clients/4.jpg"
+    },
+    {
+        "logo": "/images/clients/5.png",
+        "name": "Penguin Random House",
+        "jobDescription": "Desarrollamos en conjunto con el cliente una web que le permita mostrar su trabajo a más gente",
+        "jobFeedback": "Exelente trabajo! Trabajan de una manera profesional y cumpliendo las expectativas de uno",
+        "jobFeedbackName": "Javier Gomez",
+        "jobImgCover": "/images/clients/5.jpg"
+    }
+]

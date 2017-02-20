@@ -1,0 +1,56 @@
+/* Mixins */
+
+@mixin animation($animation, $delay: 0ms, $duration: 300ms, $direction: normal, $iteration: 1, $speed-curve: ease, $fill: forwards) {
+  animation-name: $animation;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-direction: $direction;
+  animation-iteration-count: $iteration;
+  animation-timing-function: $speed-curve;
+  animation-fill-mode: $fill;
+}
+
+@mixin keyframes($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+/* Keyframes */
+
+@include keyframes(fadeIn){
+  0%   { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@include keyframes(fadeOut){
+  0%   { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+@include keyframes(slideFromLeft){
+    0%{ transform: translateX(-100%);}
+    100%{ transform: translateX(0);}
+}
+
+/* Animation Classes */
+
+.slideFromLeft{
+    @include animation(slideFromLeft);
+}
+
+.js-fade-in{
+  @include animation(fadeIn);
+}
+
+.js-fade-out{
+  @include animation(fadeOut);
+}
+
+.js-is-hidden{
+    display:none;
+}
+
+.js-is-shown{
+    display:block;
+}

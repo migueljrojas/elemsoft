@@ -1,0 +1,136 @@
+.client-showcase{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+
+    ._selector{
+        flex-basis: 25%;
+        flex-grow:1;
+        margin-right: 10%;
+
+        li{
+            height:80px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor:pointer;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                right:0px;
+                top:0;
+                width: 3px;
+                height:0;
+                background: $mid-blue;
+                transition: all 0.3s ease;
+            }
+
+            &:hover{
+                img{
+                    filter: grayscale(.7);
+                }
+            }
+
+            &.-active{
+                img{
+                    filter: grayscale(0);
+                }
+
+                &::after{
+                    height:100%;
+                }
+            }
+        }
+
+        img{
+            max-height: 80px;
+            width:auto;
+            filter: grayscale(1);
+            transition: all 0.3s ease;
+        }
+    }
+
+    ._showcase{
+        flex-basis: 65%;
+        flex-grow:2;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        color:#999;
+
+        li{
+            visibility: hidden;
+
+            &.-active{
+                visibility: visible;
+
+                .wrapper{
+                    opacity:1;
+                }
+            }
+        }
+
+        .wrapper{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            opacity:0;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .cover{
+            max-height:180px;
+            width:auto;
+            height:auto;
+            display: block;
+            border-bottom: 5px solid $mid-blue;
+            margin: 0 auto 15px;
+        }
+
+        .desc{
+            font-size:1.4em;
+            text-align: center;
+        }
+
+        .divider{
+            height: 1px;
+            margin: 20px 0;
+            background: transparentize($dark-blue, .7);
+        }
+
+        .feedback{
+            font-family: 'Playfair Display', serif;
+            font-size:1.4em;
+            position: relative;
+            padding: 0 30px;
+            text-align: center;
+
+            &::before{
+                font: normal normal normal 14px/1 FontAwesome;
+                content: "\f10d";
+                display: block;
+                position: absolute;
+                left:0;
+                top:0;
+                font-size:1.5em;
+                color:$mid-blue;
+            }
+        }
+
+        .name{
+            font-family: 'Playfair Display', serif;
+            font-weight:700;
+            text-align: center;
+            color:$mid-blue;
+        }
+    }
+}

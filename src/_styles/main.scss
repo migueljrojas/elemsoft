@@ -2,7 +2,16 @@
 @import 'node_modules/font-awesome/scss/font-awesome';
 @import 'bootstrap';
 @import 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700';
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i';
+@import 'bower_components/slick-carousel/slick/slick.scss';
+@import 'partials/slick-theme.scss';
+@import 'partials/colors';
+@import 'partials/utils';
+@import 'partials/animations';
+@import 'partials/buttons-and-links';
+@import '../_modules/client-showcase/client-showcase';
 @import '../_modules/header/header';
+@import '../_modules/footer/footer';
 @import 'pages/home';
 
 

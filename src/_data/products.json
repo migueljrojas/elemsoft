@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Sistema de Gestión de Torneos de Fútbol",
+        "desc": "Aplicativo web que permite crear y administrar principalmente personas, pagos de inscripción, creación de equipos, torneos y la administración de los mismos compuesto por una web que le asigna al jugador un nombre de usuario y contraseña que le permite gestionar el equipos y pagos desde la web, aparte de poder hacer el seguimiento del torneo (posiciones, goleadores, fixture, resultados)",
+        "modulos": [
+            "Personas",
+            "Socios",
+            "Torneos",
+            "Equipos",
+            "Pagos"
+        ],
+        "images": [
+            "/images/products/product1-1.jpg",
+            "/images/products/product1-2.jpg",
+            "/images/products/product1-3.jpg",
+            "/images/products/product1-4.jpg"
+        ]
+    },
+    {
+        "title": "Sistema de Gestión de Torneos de Tenis",
+        "desc": "Aplicativo web que permite crear y administrar principalmente personas, pagos de inscripción, creación de torneos y la administración de los mismos compuesto por una web que le asigna al jugador un nombre de usuario y contraseña que le permite gestionar el equipos y pagos desde la web, aparte de poder hacer el seguimiento del torneo",
+        "modulos": [
+            "Personas",
+            "Socios",
+            "Torneos",
+            "Pagos"
+        ],
+        "images": [
+            "/images/products/product1-1.jpg",
+            "/images/products/product1-2.jpg",
+            "/images/products/product1-3.jpg",
+            "/images/products/product1-4.jpg"
+        ]
+    }
+
+]

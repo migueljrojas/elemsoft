@@ -2,5 +2,135 @@ extends _layouts/base
 
 block content
     main.home
-        ._hero
+        section._hero
+            ._hero-logo.slideFromLeft
+                img(src='/images/logo.png')
+                
+        section._main-cta
+            h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            a.Btn._cta(href="/contacto") Contactanos &gt; &gt;
+            
+        .container.v-spacing
+            .row
+                .col-xs-24.col-sm-12.col-lg-8
+                    section._nosotros
+                        h2._title Nosotros
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        img._signature(src="/images/signature.png")
+                        
+                .col-xs-24.col-sm-12.col-lg-16
+                    section._clientes
+                        h2._title Nuestros clientes
+                        
+                        .client-showcase
+                            ul._selector.list-unstyled
+                                each val, index in site.data.clients
+                                    li(data-showcase-target="client-#{index}")
+                                        img(src=val.logo, alt=val.name)
+                            
+                            ul._showcase.list-unstyled
+                                each val, index in site.data.clients
+                                    li(data-showcase-index="client-#{index}")
+                                        .wrapper
+                                            img.cover(src=val.jobImgCover, alt=val.name)
+                                            p.desc #{val.jobDescription}
+                                            .divider
+                                            p.feedback #{val.jobFeedback}
+                                            p.name - #{val.jobFeedbackName} -
+                    
+                        a.Btn(href="/servicios") Ver más clientes &gt;&gt;
+                    
+        section._servicios
+            h2._title Servicios
+            .container
+                .row
+                    each val in site.data.services
+                        .col-xs-24.col-sm-12.col-md-8._service
+                            h3 #{val.title}
+                            .icon
+                                img(src=val.icon, alt=val.title)
+                            p #{val.desc}
+                            a.more-info(href="/servicios/#{val.url}")
+                                span
+                                | más información
+                        
+        section._productos
+            .container
+                .row
+                    .col-xs-24
+                        h2._title Productos
+                        
+                        ._product-slider
+                            each val in site.data.products
+                                div
+                                    h3._name #{val.title}
+                                    .row
+                                        .col-xs-24.col-sm-24.col-md-12
+                                            .row
+                                                .col-xs-24.col-md-16
+                                                    h4.desc-title Descripción
+                                                    div._desc
+                                                        p #{val.desc}
+                                                    
+                                                    a.Btn._cta Comprar &gt;&gt;
+                                                .col-xs-24.col-md-8
+                                                    h4 Módulos
+                                                    div._mods
+                                                        ul.list-unstyled
+                                                            each module in val.modulos
+                                                                li #{module}
+                                        .col-xs-24.col-sm-24.col-md-12
+                                            .row
+                                                .col-xs-24
+                                                    h4 Imágenes
+                                                .col-xs-24.col-md-20
+                                                    ul._gallery.list-unstyled
+                                                        each image, index in val.images
+                                                            li(data-gallery="photo-#{index}")
+                                                                img(src=image)
+                                                .col-xs-24.col-md-4
+                                                    ul._thumbs.list-unstyled
+                                                        each image, index in val.images
+                                                            li(data-gallery-index="photo-#{index}")
+                                                                img(src=image)
+                        
+        
+        section._contacto
+            .container
+                h2._title Contacto
+                .row
+                    .col-xs-24.col-md-8.info
+                        img.logo(src="/images/logo.png")
+                        
+                        p
+                            | Ushuaia
+                            br
+                            strong Telf: 
+                            | +54 xxx xxx xxxx
+                            br
+                            strong Email: 
+                            a(href="mailto:info@elemsoft.com.ar") info@elemsoft.com.ar
+                            
+                        p
+                            | Estamos comprometidos a brindar un servicio profesional a la altura de tus expectativas.
+                            br
+                            | Escribinos tu consulta:
+                        
+                        
+                    .col-xs-24.col-md-8
+                        form._contact-form.row
+                            input.col-xs-11(type="text", placeholder="Nombre")
+                            input.col-xs-11.col-xs-offset-2(type="text", placeholder="Apellido")
+                            input.col-xs-24(type="email", placeholder="Email")
+                            input.col-xs-24(type="number", placeholder="Teléfono")
+                            input.col-xs-24(type="email", placeholder="Confirmar email")
+                            label.col-xs-24 Mensaje
+                            textarea.col-xs-24(rows="6")
+                    .col-xs-24.col-md-8
+                        .embed-responsive.embed-responsive-4by3
+                            iframe.embed-responsive-item(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13009.200089282713!2d-68.30496438507006!3d-54.802404354706056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22b5bad109bf%3A0x5498473dba43ebfc!2sUshuaia%2C+Tierra+del+Fuego!5e0!3m2!1ses!2sar!4v1487550703447", frameborder="0", style="border:0", allowfullscreen)
+                    
+                    
+                
+                
             

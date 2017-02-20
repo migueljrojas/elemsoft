@@ -1,7 +1,346 @@
 .home{
+    background: #f0f0f0;
+
+    ._title{
+        color: $mid-blue;
+        font-weight: 200;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
     ._hero{
         height:65vh;
-        background: url('../images/hero.jpg') no-repeat center center;
-        background-size: cover;
+        background: url('../images/hero.jpg') no-repeat top center;
+        background-size: 100%;
+        background-attachment: fixed;
+        position: relative;
     }
+
+    ._hero-logo{
+        background: rgba(255,255,255,.5);
+        position: relative;
+        top: 50%;
+        transform: translate3d(0,-50%,0);
+        padding: 20px 20px 20px 10%;
+        float: left;
+        text-align: right;
+
+        img{
+            display: inline-block;
+        }
+    }
+
+    ._main-cta{
+        background: #1b3651;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 5vh 0;
+
+        h1{
+            margin: 0;
+            font-size:2em;
+            font-weight: 200;
+            margin-right: 20px;
+            padding-top: 10px;
+        }
+
+        ._cta{
+            &:hover{
+                background: rgba(255,255,255,.1);
+            }
+        }
+    }
+
+    ._nosotros{
+        ._signature{
+            margin-top: 20px;
+        }
+    }
+
+    ._clientes{
+        text-align: center;
+
+        ._title{
+            text-align: center;
+            padding-left: 35%;
+        }
+
+        .Btn{
+            color:$mid-blue;
+            margin-left: 35%;
+
+            &:hover{
+                background: transparentize($mid-blue, .9);
+            }
+        }
+    }
+
+    ._servicios{
+        height: 75vh;
+        background: url('../images/services.jpg') no-repeat top center;
+        background-size: 100%;
+        background-attachment: fixed;
+        position: relative;
+        color:#fff;
+        padding: 60px 0;
+
+        ._title{
+            text-align: center;
+            color:#fff;
+        }
+
+        ._service{
+            text-align: center;
+
+            .icon{
+                border-radius: 50%;
+                width:150px;
+                height:150px;
+                position: relative;
+                background: $mid-blue;
+                margin: 20px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    max-width:100px;
+                    flex-basis: 100px;
+                    height: auto;
+                }
+            }
+
+            p{
+                width:80%;
+                margin: auto;
+            }
+
+            .more-info{
+                display: block;
+                margin-top: 20px;
+                color:#fff;
+                transition: all 0.3s ease;
+
+                span{
+                    display: inline-block;
+                    height:30px;
+                    width:30px;
+                    border-radius: 50%;
+                    border:1px solid #fff;
+                    position: relative;
+                    margin-right: 10px;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    transition: all 0.3s ease;
+
+                    &::before,
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width:50%;
+                        left:0;
+                        right:0;
+                        margin: auto;
+                        top:50%;
+                        height:1px;
+                        background: #fff;
+                    }
+
+                    &::after{
+                        transform:rotate(90deg);
+                    }
+                }
+
+                &:hover{
+                    text-decoration: none;
+
+                    span{
+                        background: $mid-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    ._productos{
+        height:75vh;
+        background: $mid-blue;
+        position:relative;
+        padding: 60px 0;
+
+        ._title{
+            text-align: right;
+            color:#fff;
+        }
+
+        h4{
+            margin-bottom: 20px;
+
+            &.desc-title{
+                padding-left: 30px;
+            }
+        }
+
+        ._cta{
+            margin-left: 30px;
+
+            &:hover{
+                background: rgba(255,255,255,.1);
+            }
+        }
+
+        .slick-slide,
+        .slick-current,
+        .slick-active{
+            &:focus{
+                outline:none;
+                border:none;
+            }
+        }
+
+        ._product-slider{
+            color:#fff;
+
+            ._name{
+                padding:0 30px 15px;
+                border-bottom:1px solid rgba(255,255,255,.5);
+            }
+
+            ._desc{
+                margin-bottom: 40px;
+                padding-left: 30px;
+            }
+
+            ._mods{
+                li{
+                    height: 40px;
+                    line-height:40px;
+                    border-bottom:1px solid rgba(255,255,255,.3);
+                }
+            }
+
+            ._gallery{
+                position: relative;
+                li{
+                    position: absolute;
+                    visibility: hidden;
+                    top:0;
+                    left:0;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+
+                    &.-active{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                img{
+                    max-width:100%;
+                    height: auto;
+                    max-height: 50vh;
+                }
+            }
+
+            ._thumbs{
+                li{
+                    position: relative;
+                    width:100%;
+                    padding-bottom: 100%;
+                    max-width: 100px;
+                    overflow: hidden;
+                    border:3px solid $dark-blue;
+                    margin-bottom: 20px;
+                    transition: all 0.3s ease;
+
+                    &.-active{
+                        border:3px solid #fff;
+                    }
+                }
+                img{
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    bottom:0;
+                    max-height:100px;
+                    width:auto;
+                }
+            }
+        }
+    }
+
+    ._contacto{
+        padding: 60px 0;
+        color:#666;
+
+        .info{
+
+        }
+
+        .logo{
+            max-width: 250px;
+            margin-bottom: 40px;
+        }
+
+        ._contact-form{
+            input{
+                height:40px;
+                background: #e2e2e2;
+                border: none;
+                border-bottom: 3px solid $mid-blue;
+                margin-bottom: 20px;
+
+                &[type=number]{
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button{
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+                &:focus{
+                    outline:none;
+                }
+
+            }
+
+            textarea{
+                background: #e2e2e2;
+                border: none;
+                border-bottom: 3px solid $mid-blue;
+
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }

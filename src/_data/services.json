@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Desarrollo Web",
+        "icon": "/images/services/desarrollo-web.png",
+        "desc": "Desarrollamos paginas web institucionales o informativas a medida, autoadministradas por el cliente pudiendo controlar en su totalidad el contenido de la misma",
+        "url": "/servicios/desarrollo-web"
+    },
+    {
+        "title": "Sistemas Web",
+        "icon": "/images/services/sistemas-web.png",
+        "desc": "Desarrollamos sistemas de gestión a medida para llevar un mejor control de su negocio, haciéndose modulos y permitiento siempre la futura ampliación (no me sale la palabra) del sistema mientras su negocio va creciendo",
+        "url": "/servicios/sistemas-web"
+    },
+    {
+        "title": "Diseño Gráfico",
+        "icon": "/images/services/diseno-grafico.png",
+        "desc": "Nuestro equipo de diseño también si lo desea puede generar un logo que concuerde con la imagen de su negocio",
+        "url": "/servicios/diseno-grafico"
+    }
+]

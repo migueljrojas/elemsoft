@@ -1,10 +1,43 @@
 // header styles
 .header{
-    background: #336699;
+    background: $mid-blue;
     position: fixed;
-    width: 100%;
+    width: 100vw;
+    z-index: 1000000;
+    border-bottom: 1px solid $dark-blue;
+    top:0;
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height .3s ease;
 
-top:0;
+    .hamburguer{
+        position: absolute;
+        top:0;
+        right:0;
+        height:50px;
+        width:50px;
+        border-left: 1px solid rgba(255,255,255,.3);
+        display: none;
+        cursor: pointer;
+        z-index:10;
+
+        span{
+            width:70%;
+            height:1px;
+            background: #fff;
+            display: block;
+            left:0;
+            right:0;
+            margin: auto;
+            position: relative;
+            margin-top: 10px;
+            transition: all .3s ease;
+            &:first-child{
+                margin-top: 13px;
+            }
+        }
+    }
+
     .container{
         display: flex;
         justify-content: space-between;
@@ -57,4 +90,71 @@ top:0;
             }
         }
     }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .header{
+
+        &.-open{
+            max-height: 100vh;
+
+            .hamburguer{
+                border-bottom: 1px solid rgba(255,255,255,.3);
+
+                span{
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                    &:nth-child(1),
+                    &:nth-child(3){
+                        position: absolute;
+                        top:25%;
+                        width: 60%;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(3){
+                        top:30%;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        .container{
+            flex-wrap: wrap;
+            margin-top: 50px;
+            justify-content: flex-start;
+        }
+
+        .hamburguer{
+            display: block;
+        }
+
+        ._nav{
+            li{
+                display: block;
+            }
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }
