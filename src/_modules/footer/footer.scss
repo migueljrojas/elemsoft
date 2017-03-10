@@ -74,6 +74,38 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+    .footer{
+
+        text-align: center;
+
+        img{
+            display: inline-block;
+            margin: 0 auto 20px;
+        }
+
+        .container{
+            display: flex;
+            flex-flow: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ._sitemap{
+            display: flex;
+            flex-flow: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+
+
+            & > li{
+                max-width:100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
 }
 
 /* Extra Small Devices, Phones */

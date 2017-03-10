@@ -34,6 +34,27 @@ var Home = function() {
         galleryInit();
     }
 
+    $('._service:first').addClass('-visible');
+
+    $('._service-selector select').change(function(){
+        var index = $(this).children(':selected').index();
+        var index = index + 1;
+
+        $('._service').removeClass('-visible');
+        $('._service:nth-child('+ index +')').addClass('-visible');
+
+    });
+
+    $('.mobile-drop').each(function(){
+        $(this).on('click', function(){
+            $(this).toggleClass('-open');
+            $(this).siblings('.mobile-collapse').toggleClass('-expanded');
+        })
+    });
+
+
+
+
 };
 
 module.exports = Home;

@@ -43,6 +43,11 @@ block content
         section._servicios
             h2._title Servicios
             .container
+                .row._service-selector
+                    .col-xs-24
+                        select
+                            each val in site.data.services
+                                option #{val.title}
                 .row
                     each val in site.data.services
                         .col-xs-24.col-sm-12.col-md-8._service
@@ -68,31 +73,35 @@ block content
                                         .col-xs-24.col-sm-24.col-md-12
                                             .row
                                                 .col-xs-24.col-md-16
-                                                    h4.desc-title Descripción
-                                                    div._desc
+                                                    h4.desc-title.mobile-drop Descripción
+                                                    div._desc.mobile-collapse
                                                         p #{val.desc}
                                                     
-                                                    a.Btn._cta Comprar &gt;&gt;
+                                                    
                                                 .col-xs-24.col-md-8
-                                                    h4 Módulos
-                                                    div._mods
+                                                    h4.mobile-drop Módulos
+                                                    div._mods.mobile-collapse
                                                         ul.list-unstyled
                                                             each module in val.modulos
                                                                 li #{module}
                                         .col-xs-24.col-sm-24.col-md-12
                                             .row
                                                 .col-xs-24
-                                                    h4 Imágenes
-                                                .col-xs-24.col-md-20
-                                                    ul._gallery.list-unstyled
-                                                        each image, index in val.images
-                                                            li(data-gallery="photo-#{index}")
-                                                                img(src=image)
-                                                .col-xs-24.col-md-4
-                                                    ul._thumbs.list-unstyled
-                                                        each image, index in val.images
-                                                            li(data-gallery-index="photo-#{index}")
-                                                                img(src=image)
+                                                    h4.mobile-drop Imágenes
+                                                    
+                                                    .row.mobile-collapse
+                                                        .col-xs-24.col-md-20
+                                                            ul._gallery.list-unstyled
+                                                                each image, index in val.images
+                                                                    li(data-gallery="photo-#{index}")
+                                                                        img(src=image)
+                                                        .col-xs-24.col-md-4
+                                                            ul._thumbs.list-unstyled
+                                                                each image, index in val.images
+                                                                    li(data-gallery-index="photo-#{index}")
+                                                                        img(src=image)
+                                        .col-xs-24
+                                            a.Btn._cta Comprar &gt;&gt;
                         
         
         section._contacto
