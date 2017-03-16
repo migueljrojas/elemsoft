@@ -1,0 +1,25 @@
+mixin content-list(name, data)
+
+    ul.content-list
+        each val, key in data
+            li(class="#{name}-#{key}", id="#{key}")
+                ._info
+                    h2=val.title
+                    p=val.desc
+                    
+                    if val.features
+                        h3=val.features.title
+                        ul._features
+                            each feat in val.features.list
+                                li= feat
+
+                ._image
+                    if val.image.icon == true
+                        ._icon
+                            img(src=val.image.src)
+                    else
+                        img(src=val.image.src)
+                        
+                
+                    
+                

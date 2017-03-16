@@ -53,9 +53,9 @@ block content
                         .col-xs-24.col-sm-12.col-md-8._service
                             h3 #{val.title}
                             .icon
-                                img(src=val.icon, alt=val.title)
+                                img(src=val.image.src, alt=val.title)
                             p #{val.desc}
-                            a.more-info(href="/servicios/#{val.url}")
+                            a.more-info(href="#{val.url}")
                                 span
                                 | más información
                         

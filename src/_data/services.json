@@ -1,20 +1,53 @@
-[
-    {
+{
+    "desarrollo-web": {
         "title": "Desarrollo Web",
-        "icon": "/images/services/desarrollo-web.png",
+        "image": {
+            "src": "/images/services/desarrollo-web.png",
+            "icon": true
+        },
         "desc": "Desarrollamos paginas web institucionales o informativas a medida, autoadministradas por el cliente pudiendo controlar en su totalidad el contenido de la misma",
-        "url": "/servicios/desarrollo-web"
+        "url": "/servicios#desarrollo-web",
+        "features": {
+            "title": "Características",
+            "list": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            ]
+        }
     },
-    {
+    "sistemas-web": {
         "title": "Sistemas Web",
-        "icon": "/images/services/sistemas-web.png",
+        "image": {
+            "src": "/images/services/sistemas-web.png",
+            "icon": true
+        },
         "desc": "Desarrollamos sistemas de gestión a medida para llevar un mejor control de su negocio, haciéndose modulos y permitiento siempre la futura ampliación (no me sale la palabra) del sistema mientras su negocio va creciendo",
-        "url": "/servicios/sistemas-web"
+        "url": "/servicios#sistemas-web",
+        "features": {
+            "title": "Características",
+            "list": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            ]
+        }
     },
-    {
+    "diseño-grafico": {
         "title": "Diseño Gráfico",
-        "icon": "/images/services/diseno-grafico.png",
+        "image": {
+            "src": "/images/services/diseno-grafico.png",
+            "icon": true
+        },
         "desc": "Nuestro equipo de diseño también si lo desea puede generar un logo que concuerde con la imagen de su negocio",
-        "url": "/servicios/diseno-grafico"
+        "url": "/servicios#diseno-grafico",
+        "features": {
+            "title": "Características",
+            "list": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            ]
+        }
     }
-]
+}
